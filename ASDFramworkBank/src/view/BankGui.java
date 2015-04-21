@@ -13,8 +13,6 @@ import framework.component.Account;
 import framework.component.FinanceHandler;
 import framework.component.TxtReport;
 import framework.view.AGui;
-import framework.view.JDialogue_AddCompAcc;
-import framework.view.JDialog_AddPAcc;
 import framework.view.JDialog_Deposit;
 import framework.view.JDialog_Withdraw;
 
