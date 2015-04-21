@@ -95,17 +95,6 @@ public class BankGui extends AGui {
 		return model;
 	}
 
-	public void getTableData() {
-		// System.out.println("Come here 2");
-		/*
-		 * HashMap<String, Account> accountList =
-		 * controller.getModel().getAllAcounts();
-		 */
-
-
-
-		}
-
 
 
 	class SymAction implements java.awt.event.ActionListener {

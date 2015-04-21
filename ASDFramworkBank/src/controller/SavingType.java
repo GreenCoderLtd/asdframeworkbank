@@ -5,8 +5,8 @@ import framework.component.Type;
 public class SavingType extends Type {
 
 	public SavingType(String typeName, double interestRate,
-			double maxTransactionLimit) {
-		super(typeName, interestRate, maxTransactionLimit);
+			double maxTransactionLimit,double lowestBalanceAllowed) {
+		super(typeName, interestRate, maxTransactionLimit,lowestBalanceAllowed);
 		// TODO Auto-generated constructor stub
 	}
 

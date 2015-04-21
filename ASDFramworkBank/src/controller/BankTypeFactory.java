@@ -17,11 +17,11 @@ public class BankTypeFactory extends TypeFactory {
 		
 		if(typeName.equals("saving"))
 		{
-			return new SavingType("saving",8,1000);
+			return new SavingType("saving",8,1000,-100);
 		}
 		else 
 		{
-			return new CheckingType("checking",4,500);
+			return new CheckingType("checking",4,500,0);
 		}
 	}
 
