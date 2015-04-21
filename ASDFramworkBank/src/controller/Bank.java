@@ -21,8 +21,11 @@ public class Bank {
 		
 		finance.setGui(gui);
 		
+
 		System.out.println("");
 		
+
+
 		
 		
 		
