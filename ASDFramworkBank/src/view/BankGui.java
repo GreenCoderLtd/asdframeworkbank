@@ -180,7 +180,7 @@ public class BankGui extends AGui {
             String accountNumber = (String)model.getValueAt(selection, 0);
             
 		    //Show the dialog for adding deposit amount for the current mane
-		    DepositWindow dep = new DepositWindow(myframe,accountNumber);
+            JDialog_Deposit dep = new JDialog_Deposit(myframe,accountNumber);
 		    dep.setBounds(430, 15, 275, 140);
 		    dep.show();
         }
@@ -199,7 +199,7 @@ public class BankGui extends AGui {
             String accountNumber = (String)model.getValueAt(selection, 0);
 
 		    //Show the dialog for adding withdraw amount for the current mane
-		    WithdrawWindow wd = new WithdrawWindow(myframe,accountNumber);
+            JDialog_Withdraw wd = new JDialog_Withdraw(myframe,accountNumber);
 		    wd.setBounds(430, 15, 275, 140);
 		    wd.show();
         }
