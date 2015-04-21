@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -64,14 +65,20 @@ public class BankGui extends AGui {
 		JButton_Withdraw = new JButton("Withdraw");
 		JButton_Withdraw.setPreferredSize(new Dimension(BUTTON_WIDTH,
 				BUTTON_HEIGHT));
+		
+		JButton_Addinterest = new JButton("Add Interest");
+		JButton_Addinterest.setPreferredSize(new Dimension(BUTTON_WIDTH,
+				BUTTON_HEIGHT));
 
 		JButton_Deposit.addActionListener(lSymAction);
 		JButton_Withdraw.addActionListener(lSymAction);
+		JButton_Addinterest.addActionListener(lSymAction);
 
 		operationButtonPanel.add(JButton_Deposit);
 		operationButtonPanel.add(Box.createVerticalStrut(V_GAP));
 		operationButtonPanel.add(JButton_Withdraw);
 		operationButtonPanel.add(Box.createVerticalStrut(V_GAP));
+		operationButtonPanel.add(JButton_Addinterest);
 
 	}
 
@@ -114,8 +121,11 @@ public class BankGui extends AGui {
 				JButtonWithdraw_actionPerformed(event);
 			else if (object == JButton_GenerateReport)
 				JButtonGenerateReport_actionPerformed(event);
-
+			else if (object == JButton_Addinterest)
+				JButtonAddinterest_actionPerformed(event);
 		}
+
+		
 	}
 
 	
@@ -166,6 +176,13 @@ public class BankGui extends AGui {
 		pac.setBounds(450, 20, 300, 400);
 		pac.show();
 
+	}
+	
+	private void JButtonAddinterest_actionPerformed(ActionEvent event) {
+		
+		controller.addInterest();
+		
+		modelUpdated();
 	}
 
 	void JButtonDeposit_actionPerformed(java.awt.event.ActionEvent event)
