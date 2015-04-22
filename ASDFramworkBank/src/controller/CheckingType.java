@@ -1,8 +1,8 @@
 package controller;
-import framework.component.Type;
+import framework.component.AccountType;
 
 
-public class CheckingType extends Type {
+public class CheckingType extends AccountType {
 
 	public CheckingType(String typeName, double interestRate,
 			double maxTransactionLimit,double lowestBalanceAllowed) {

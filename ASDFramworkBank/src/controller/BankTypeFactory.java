@@ -1,6 +1,6 @@
 package controller;
 
-import framework.component.Type;
+import framework.component.AccountType;
 import framework.component.TypeFactory;
 
 public class BankTypeFactory extends TypeFactory {
@@ -13,7 +13,7 @@ public class BankTypeFactory extends TypeFactory {
 	}
 
 	@Override
-	public Type getType(String typeName) {
+	public AccountType getType(String typeName) {
 		
 		if(typeName.equals("saving"))
 		{
