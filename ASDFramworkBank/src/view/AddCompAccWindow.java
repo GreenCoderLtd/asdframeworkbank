@@ -2,6 +2,7 @@ package view;
 
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.*;
@@ -86,17 +87,27 @@ public class AddCompAccWindow extends JDialogAddComAcc
 
 	void JButtonOK_actionPerformed(java.awt.event.ActionEvent event)
 	{
+	    
+	    getCommonInputData();
 		
-		getCommonInputData();
+		boolean allInputOK=inputValidate(new ArrayList<String>(guiData.values()));
+
 		
-		String type=getAccountTypeSelected();
-		
-		command=new CompanyAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getType(type));
-		command.exceute();
-		
-		parentframe.modelUpdated();
-		
-	    dispose();
+		if(allInputOK)
+		{
+			String type=getAccountTypeSelected();
+			
+			command=new CompanyAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getType(type));
+			command.exceute();
+			
+			parentframe.modelUpdated();
+
+	       dispose();
+		}
+		else 
+		{
+			JOptionPane.showMessageDialog(null, "Please Input All Data");
+		}
 			 
 	}
 

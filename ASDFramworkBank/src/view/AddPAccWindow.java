@@ -6,6 +6,7 @@ package view;
 */
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.*;
@@ -85,15 +86,27 @@ public class AddPAccWindow extends JDialogAddPerAcc
 	void JButtonOK_actionPerformed(java.awt.event.ActionEvent event)
 	{
 		getCommonInputData();
-
-		String type=getAccountTypeSelected();
 		
-		command=new PersonalAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getType(type));
-		command.exceute();
-		
-		parentframe.modelUpdated();
+		boolean allInputOK=inputValidate(new ArrayList<String>(guiData.values()));
 
-       dispose();
+		
+		if(allInputOK)
+		{
+			String type=getAccountTypeSelected();
+			
+			command=new PersonalAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getType(type));
+			command.exceute();
+			
+			parentframe.modelUpdated();
+
+	       dispose();
+		}
+		else 
+		{
+			JOptionPane.showMessageDialog(null, "Please Input All Data");
+		}
+
+		
 	}
 
 	
