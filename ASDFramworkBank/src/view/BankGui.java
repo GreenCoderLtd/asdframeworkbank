@@ -132,7 +132,7 @@ public class BankGui extends AGui {
 			rawData[0] = account.getAccountNumber();
 			rawData[1] = account.getOwner().getName();
 			rawData[2] = account.getOwner().getCity();
-			rawData[3] = account.getOwner().getKindOfAccount();
+			rawData[3] = account.getOwner().getCustomerType();
 			rawData[4] = account.getAccountType().getTypeName();
 			rawData[5] = account.getAccountBalance();
 	        model.addRow(rawData);
