@@ -16,8 +16,6 @@ import framework.component.IAccount;
 import framework.component.TxtReport;
 import framework.view.AGui;
 import framework.view.DefaultGui;
-import framework.view.JDialog_Deposit;
-import framework.view.JDialog_Withdraw;
 
 public class BankGui extends DefaultGui {
 

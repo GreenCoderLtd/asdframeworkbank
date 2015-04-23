@@ -22,7 +22,7 @@ public class AddCompAccWindow extends JDialogAddComAcc
 
     ICommand command;
     JRadioButton[] typeRadioButton;
-    SymAction ISymAction = new SymAction();
+    SymAction bankCompanyActionListner = new SymAction();
     
 	public AddCompAccWindow(AGui myframe)
 	{
@@ -31,9 +31,9 @@ public class AddCompAccWindow extends JDialogAddComAcc
 
 		generateTypeRadioButtons();
 		
-		JButton_OK.removeActionListener(mySymAction);
+		JButton_OK.removeActionListener(companyAccActionListner);
 		
-		JButton_OK.addActionListener(ISymAction);
+		JButton_OK.addActionListener(bankCompanyActionListner);
 		
 
 	}

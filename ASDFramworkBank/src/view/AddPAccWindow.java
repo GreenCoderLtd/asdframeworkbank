@@ -22,7 +22,7 @@ public class AddPAccWindow extends JDialogAddPerAcc
 
 	JRadioButton[] typeRadioButton;
 	
-	SymAction lSymAction = new SymAction();
+	SymAction bankPersonalActionLisneter = new SymAction();
 	
 	public AddPAccWindow(AGui myframe)
 	{
@@ -30,9 +30,9 @@ public class AddPAccWindow extends JDialogAddPerAcc
 
 		generateTypeRadioButtons();
 		
-		JButton_OK.removeActionListener(mySymAction);
+		JButton_OK.removeActionListener(personalAccActionListner);
 		
-		JButton_OK.addActionListener(lSymAction);
+		JButton_OK.addActionListener(bankPersonalActionLisneter);
 		
 	}
 
