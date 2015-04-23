@@ -1,12 +1,10 @@
 package controller;
 
-import framework.component.DefaultTypeFactory;
-import framework.component.SimpleTypeFactory;
-import framework.component.TypeFactory;
+import framework.component.AccountTypeFactory;
 
 public class SimpleBankTypeFactory {
 
-	public static TypeFactory getBankTypeFactory()
+	public static AccountTypeFactory getBankTypeFactory()
 	{
 		return new BankTypeFactory();
 	}

@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.table.DefaultTableModel;
 
 import framework.component.Account;
-import framework.component.FinanceHandler;
+import framework.component.FinanceSystem;
 import framework.component.IAccount;
 import framework.component.TxtReport;
 import framework.view.AGui;
@@ -22,7 +22,7 @@ public class BankGui extends DefaultGui {
 	SymAction bankGuiActionListener=new SymAction();
 
 
-	public BankGui(String title, FinanceHandler controller) {
+	public BankGui(String title, FinanceSystem controller) {
 		super(title, controller);
 		
 		JButton_PerAC.removeActionListener(defaultGuiActionListener);

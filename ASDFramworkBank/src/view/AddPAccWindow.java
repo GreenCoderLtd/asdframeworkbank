@@ -39,7 +39,7 @@ public class AddPAccWindow extends JDialogAddPerAcc
 	public void generateTypeRadioButtons()
 	{
 		int yPosition=12;
-		String[] types=SimpleBankTypeFactory.getBankTypeFactory().getTypes();
+		String[] types=SimpleBankTypeFactory.getBankTypeFactory().getAccountTypes();
 		
 		ButtonGroup bG = new ButtonGroup();
 	   
@@ -94,7 +94,7 @@ public class AddPAccWindow extends JDialogAddPerAcc
 		{
 			String type=getAccountTypeSelected();
 			
-			command=new PersonalAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getType(type));
+			command=new PersonalAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getAccountType(type));
 			command.exceute();
 			
 			parentframe.modelUpdated();

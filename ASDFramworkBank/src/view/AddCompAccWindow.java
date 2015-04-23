@@ -43,7 +43,7 @@ public class AddCompAccWindow extends JDialogAddComAcc
 	public void generateTypeRadioButtons()
 	{
 		int yPosition=12;
-		String[] types=SimpleBankTypeFactory.getBankTypeFactory().getTypes();
+		String[] types=SimpleBankTypeFactory.getBankTypeFactory().getAccountTypes();
 		
 		ButtonGroup bG = new ButtonGroup();
 	   
@@ -97,7 +97,7 @@ public class AddCompAccWindow extends JDialogAddComAcc
 		{
 			String type=getAccountTypeSelected();
 			
-			command=new CompanyAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getType(type));
+			command=new CompanyAccountOpenCommand(parentframe.getController(), guiData,SimpleBankTypeFactory.getBankTypeFactory().getAccountType(type));
 			command.exceute();
 			
 			parentframe.modelUpdated();

@@ -1,19 +1,18 @@
 package controller;
 
-import framework.component.AccountType;
-import framework.component.TypeFactory;
+import framework.component.*;
 
-public class BankTypeFactory extends TypeFactory {
+public class BankTypeFactory extends AccountTypeFactory {
 
 	@Override
-	public String[] getTypes() {
+	public String[] getAccountTypes() {
 		// TODO Auto-generated method stub
 		return new String[]{"saving","checking"};
 		
 	}
 
 	@Override
-	public AccountType getType(String typeName) {
+	public AccountType getAccountType(String typeName) {
 		
 		if(typeName.equals("saving"))
 		{
@@ -24,5 +23,6 @@ public class BankTypeFactory extends TypeFactory {
 			return new CheckingType("checking",4,500,0);
 		}
 	}
+
 
 }
